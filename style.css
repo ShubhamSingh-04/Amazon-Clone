@@ -4,13 +4,21 @@
     border: border-box;
 }
 
+header{
+    display: flex;
+    flex-direction: column;
+}
+
 .navbar{
     height: 60px;
+    width: 100%;
     background-color: #0f1111;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: fixed;
+    z-index: 2;
 }
 
 /* nav logo */
@@ -151,11 +159,15 @@
 
 /* the Panel below navigation bar   (within header)*/
 .panel{
-    background-color: #222f3d;
     height: 39px;
+    width: 100%;
+    position: relative;
+    top:60px;
+    background-color: #222f3d;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    z-index: 1;
 }
 
 .panel *{
@@ -186,12 +198,13 @@
 
 /* Amazon Ad (just below header) */
 .amazon-ad{
-    background-image: url("Amazon-Ad.jpg");
     height: 360px;
+    background-image: url("Amazon-Ad.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 60px;
 }
 
 /* the message asking to visit amazon.in */
@@ -208,21 +221,88 @@
 }
 .message a{
     text-decoration: none;
-    color: rgb(74, 74, 238);
+    color: #007185;
 }
 
 /* shopping content */
-.shop-section{
+
+.shop-section-container{
+    margin-top: -13px;
     background-color: #9FEEFC;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-
+}
+.shop-section{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 
 .box{
-    height: 400px;
+    height: 370px;
     width: 23%;
-    border: 2px solid black;
-    background-color: white;
+    /* border: 2px solid black; */
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    margin: 12px;
+}
+
+.box-title{
+    width: 91%;
+    font-size: 1.4rem;
+}
+
+.box-bottom-message{
+    display: block; 
+    color: #007185;   
+}
+
+.box-bottom-message:hover{
+    cursor: pointer;
+}
+
+.box-img{
+    height: 85%;
+    width: 95%;
+    display: flex;
+    flex-direction: column-reverse;
+    background-size: 100% 90%;
+    background-repeat: no-repeat;
+}
+
+.box-img-1{
+    background-image:url("other-assets/PC.jpg") ;
+}
+
+.box-img-2{
+    background-image:url("other-assets/gadget-store.jpg") ;
+}
+
+.box-img-3{
+    background-image:url("other-assets/Gaming.jpg") ;
+}
+
+.box-img-4{
+    background-image:url("other-assets/business-sol.jpg") ;
+}
+
+.box-img-5{
+    background-image:url("other-assets/car-bike-parts.jpg") ;
+}
+
+.box-img-6{
+    background-image:url("other-assets/fitness.jpg") ;
+}
+
+.box-img-7{
+    background-image:url("other-assets/home-appliances.webp") ;
+}
+
+.box-img-8{
+    background-image:url("other-assets/furniture.jpg") ;
 }
